@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
     <meta name="google-site-verification" content="aHx2pnoUrtIA_TE67GcP7O6hQQNONlLeT1zc935DyW4" />
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>PkSmm Premium | Next-Gen Panel</title>
+    <title>PkSmm Premium | Buy Low price</title>
 
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="apple-touch-icon" href="logo.png">
@@ -21,12 +20,11 @@
         
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background: #fff5f7; /* Soft pinkish background */
+            background: #fff5f7;
             color: #1a1a1a;
             overflow-x: hidden;
         }
 
-        /* Side Navigation Drawer */
         #sideNav {
             transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             z-index: 100;
@@ -54,7 +52,6 @@
             text-align: center;
         }
 
-        /* 3D Premium Card Logic */
         .premium-3d-card {
             background: white;
             border-radius: 30px;
@@ -75,7 +72,6 @@
         .ff-border { border-left: 6px solid #F97316; } 
         .redeem-border { border-left: 6px solid #34A853; } 
 
-        /* Premium 3D Button - Changed to Pink Gradient */
         .premium-3d-button {
             background: linear-gradient(180deg, #ec4899 0%, #db2777 100%);
             color: white;
@@ -98,7 +94,6 @@
             box-shadow: 0 2px 0px #9d174d;
         }
 
-        /* --- LOADING SPINNER STYLE --- */
         .btn-loader {
             width: 18px;
             height: 18px;
@@ -121,7 +116,6 @@
             margin-right: 15px;
         }
 
-        /* Full Screen Alert Styling */
         #customAlert {
             display: none;
             position: fixed;
@@ -318,7 +312,6 @@
         const navOverlay = document.getElementById('navOverlay');
         const customAlert = document.getElementById('customAlert');
 
-        // Toggle Drawer Control
         function toggleMenu() {
             const isOpen = sideNav.style.transform === 'translateX(0px)';
             sideNav.style.transform = isOpen ? 'translateX(-100%)' : 'translateX(0px)';
@@ -337,7 +330,7 @@
         }
 
         function contactUs() {
-            window.location.href = "https://wa.me/917877904182";
+            window.location.href = "ai.html";
         }
 
         function shareReferral() {
@@ -345,7 +338,6 @@
             window.location.href = `whatsapp://send?text=${message}`;
         }
 
-        // --- LOADING & REDIRECT LOGIC ---
         function handleRedirect(button, url) {
             const text = button.querySelector('.btn-text');
             const loader = button.querySelector('.btn-loader');
@@ -361,7 +353,6 @@
             }, 2000);
         }
 
-        // --- FIX FOR BACK BUTTON (BUFFERING RESET) ---
         window.addEventListener('pageshow', function (event) {
             const buttons = document.querySelectorAll('.premium-3d-button');
             buttons.forEach(btn => {
