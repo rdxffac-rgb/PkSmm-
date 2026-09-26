@@ -73,7 +73,7 @@
         <div class="relative flex items-center justify-center mb-8">
             <div class="loader-ring"></div>
             <div class="loader-box">
-                <img src="ai.png" alt="Logo">
+                <img src="https://my-data.xo.je/uploads/private_e0cc8e7009d25a96c22b759f43595ecf/1790331242_21294.png" alt="AI Support Logo">
             </div>
         </div>
         
@@ -82,18 +82,30 @@
     </div>
 
     <script>
+        const targetURL = "https://demo1.xo.je";
+        let redirectTimer;
+
         window.addEventListener('DOMContentLoaded', () => {
             document.body.classList.add('fade-in');
         });
 
-        setTimeout(() => {
+        function executeRedirect() {
             document.body.classList.remove('fade-in');
             document.body.classList.add('fade-out');
             
             setTimeout(() => {
-                window.location.href = "https://demo1.xo.je";
+                window.location.replace(targetURL);
             }, 300);
-        }, 3000);
+        }
+
+        redirectTimer = setTimeout(executeRedirect, 3000);
+
+        window.addEventListener('pageshow', (event) => {
+            if (event.persisted) {
+                clearTimeout(redirectTimer);
+                window.location.replace(targetURL);
+            }
+        });
     </script>
 </body>
 </html>
